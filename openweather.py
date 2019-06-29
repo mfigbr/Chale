@@ -9,4 +9,11 @@ request = 'https://' + api_url + 'weather?' + api_param + '&appid=' + api_token
 print(request)
 
 response = requests.get(request)
-print(response.json())
+data = response.json()
+
+main = data['main']
+temp = main['temp']
+humitity = main['humidity']
+
+print(temp)
+print(humidity)
